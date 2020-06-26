@@ -1,0 +1,328 @@
+@charset "utf-8";
+/* Сброс стилей браузеров */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+/* Конец сброса стилей браузеров */
+/* ************************************************* */
+
+/* Подключаем шрифты */
+@font-face {
+	font-family: "Segoe_UI";
+	src: url("../fonts/segoeuisl.eot");
+	src: local("☺"),
+	url("../fonts/segoeuisl.woff") format("woff"),
+	url("../fonts/segoeuisl.ttf") format("truetype"),
+	url("../fonts/segoeuisl.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Общие стили */
+* {
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	font-family:"Segoe_UI", Verdana;
+	font-size: 16px;
+	color: #333333;
+	background-color: #ECF6F8;
+	line-height: 1.1;
+}
+h1 {
+	font-size: 1.8em;
+	margin-bottom: 20px;
+}
+h2 {
+	font-size: 1.5em;
+	margin-bottom: 20px;
+	text-align: center;
+}
+h3 {
+	font-size: 1.2em;
+	margin-bottom: 20px;
+}
+a {
+	font-weight: bold;
+	text-decoration: none;
+	color:inherit;
+}
+a:hover {
+	text-decoration: underline;
+}
+p {
+	margin-bottom: 10px;
+}
+p:last-child {
+	margin-bottom: 0;
+}
+button:hover {
+	cursor: pointer;
+}
+strong {
+	font-weight: bold;
+}
+.resp {
+	color: red;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.form-notice {
+	color: #247988;
+	font-size: 14px;
+}
+.red {
+	color: red;
+}
+
+/* Блок меню */
+.admin-menu {
+	background-color: #247988;
+	color: #fff;
+	flex: 0 0 250px;
+	font-size: 1.1em;
+	padding: 0 20px 20px;
+}
+.admin-menu a {
+	color: yellowgreen;
+}
+
+.logout_link {
+	border-bottom: solid 1px #ECF6F8;
+	text-align: center;
+}
+.logout_link a {
+	display: inline-block;
+	padding: 26px 0;
+}
+
+/* Логотип */
+.header_logo {
+	background-color: #247988;
+	padding: 10px 20px;
+	text-align: center;
+}
+.header_logo a {
+	display: inline-block;
+}
+
+/* Блок контента */
+.admin-content {
+	flex-grow: 1;
+}
+.admin-content_content {
+	padding: 20px;
+}
+.cat_0 {
+	font-size: 18px;
+}
+.cat_1 {
+	font-size: 16px;
+	margin-top: 20px;
+}
+.cat_2 {
+	font-size: 14px;
+	padding-left: 10px;
+	margin-top: 10px;
+}
+.add-slide-form {
+	margin-bottom: 20px;
+}
+.slides-view_element {
+	border: solid 1px #247988;
+	margin-bottom: 10px;
+	padding: 10px;
+	position: relative;
+}
+.slides-view_element .slide-img img {
+	display: block;
+	width: 100%;
+}
+.slides-view_element form {
+	padding: 20px 50px 10px 0;
+}
+.slides-view_element .del-link {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+
+.gallery-view_element {
+	border: solid 1px #247988;
+	margin-bottom: 10px;
+	padding: 10px;
+	position: relative;
+	display: flex;
+}
+.gallery-view_element .del-link {
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+}
+.gallery-view_element .gallery-img {
+	flex: 0 0 25%;
+}
+.gallery-view_element .gallery-img img {
+	display: block;
+	width: 100%;
+}
+.gallery-view_element form {
+	padding-left: 10px;
+	flex: 0 0 75%;
+}
+.gallery-view_element form p {
+	margin-bottom: 5px;
+}
+.gallery-view_element .text-input {
+	display: block;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.service_add-pic-bl {
+	display: flex;
+}
+.service_add-pic-bl div {
+	padding-right: 20px;
+	border-right: solid 1px #247988;
+	text-align: center;
+}
+.service_add-pic-bl div img {
+	display: inline-block;
+	padding: 10px;
+	width: 90px;
+}
+.service_add-pic-bl form {
+	padding-left: 20px;
+}
+.service_edit-form {
+	border: solid 1px #247988;
+	margin-bottom: 10px;
+	padding: 10px;
+	position: relative;
+}
+.service_edit-form .del-link {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+.service_edit-form .service_bottom {
+	margin-bottom: 30px;
+}
+.service_edit-form .service_top {
+	margin-top: 30px;
+}
+.service_edit-form div p {
+	margin-bottom: 5px;
+}
+.service_edit-form input, .service_edit-form textarea, .service_edit-form select {
+	padding: 5px;
+}
+.service_edit-form .txt-input, .service_edit-form .txt-textarea, .service_edit-form .desc-textarea {
+	width: 100%;
+}
+.note-editable {
+	background-color: white;
+}
+
+.price-category_element {
+	margin-bottom: 20px;
+}
+.price-category_services {
+	opacity: 0.6;
+ 	margin-bottom: 10px;
+}
+.price-category_main {
+	font-size: 18px;
+	margin-left: 20px;
+}
+.price-category_sub {
+	margin-left: 40px;
+}
+
+.price-category-edit-form form {
+	padding: 10px 56px 10px 10px;
+	border: solid 1px #247988;
+	position: relative;
+}
+.price-category-edit-form form .name {
+	width: 100%;
+	height: auto;
+}
+.price-category-edit-form form div {
+	margin-bottom: 20px;
+}
+.price-category-edit-form .submit_but {
+	margin-bottom: 0;
+}
+.price-category-edit-form .submit_but input {
+	cursor: pointer;
+}
+.price-category-edit-form input, .price-category-edit-form select {
+	padding: 5px;
+}
+.price-category-edit-form .del-link {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+.price-edit form {
+	padding: 10px 56px 10px 10px;
+	border: solid 1px #247988;
+	position: relative;
+}
+.price-edit form .name {
+	width: 100%;
+	height: auto;
+}
+.price-edit form .remark_before, .price-edit form .remark_after {
+	width: 80px;
+}
+.price-edit form .price {
+	width: 60px;
+}
+form .number {
+	width: 50px;
+}
+.price-edit form .submit_but {
+	cursor: pointer;
+}
+.price-edit form div {
+	border-bottom: solid 1px #247988;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+.price-edit form div:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+.price-edit form .del-link {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+.price-edit form .del-link img {
+	width: 36px;
+}
+
